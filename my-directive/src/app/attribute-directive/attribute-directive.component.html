@@ -1,0 +1,11 @@
+<h3>Attr directive</h3>
+<h5>ngClass</h5>
+<p [ngClass]="{'red':isError(),'blue':'isError()','green':isError()}" >normal example</p>
+<p [ngClass]="{'red': !issessionactive, 'blue': issessionactive }" >{{sessionMessage}}</p>
+<button class="btn btn-primary" (click)="checksession()" >click here</button>
+<hr>
+
+<h5>ngStyle</h5>
+<div [ngStyle]="{'color':myColor}" >change my color</div>
+<input type="text" [(ngModel)]="myColor" >
+{{myColor}}

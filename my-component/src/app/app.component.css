@@ -1,0 +1,26 @@
+.mainDiv{
+   position:absolute;
+   width:300px;
+   height:200px;
+   overflow:auto;
+   display:table;  
+   background: yellow;
+}
+
+.tableRow{
+  display:table-row;
+  border:1px solid green;
+}
+
+.checkbox{
+   display:table-cell; 
+   vertical-align:top;
+   border:1px solid red;
+}
+
+.content{
+   display:table-cell;  
+   vertical-align:top;
+   border:1px solid blue;
+   padding-bottom:10px;
+}

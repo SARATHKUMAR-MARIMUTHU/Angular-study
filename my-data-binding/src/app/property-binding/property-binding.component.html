@@ -1,0 +1,26 @@
+<input type="text" value="name"   style="margin-top:10px;" >
+<input type="text" value="{{personName}}"  style="margin-top:10px; border:1px solid red; border:1px solid green;" > <!--si interpo-->
+<br>
+<h2>property binding</h2>
+
+<input type="text" [value]="personName"  style="margin-top:10px;" > 
+<p>{{personName}}</p>
+
+<p class="textRed" >Example</p>
+<p [ngClass]="textRed" >this will not work</p>
+<p [ngClass]="{'text-Red1' :true}" >this will  work</p>
+<p [ngClass]="{'textRed' :true}" >this will via js work</p>
+<p [ngClass]="{ textRed: shouldApply(), green: true }">Styling this thru JS method</p>
+
+<h2>On Directive</h2>
+<p class="text-red">Example 1</p> <!-- This is simple css styling thru html attribute -->
+<p [ngClass]="blue">Styling this -- will not work</p>
+<p [ngClass]="{ blue: true }">Styling this thru js expression - look at single curly brace. It is js expression</p>
+<p [ngClass]="{ red: shouldApply(), green: true }">Styling this thru JS method</p>
+
+<p [ngClass]="{ red: shouldApply()}" class="blue">Styling this thru JS method</p>
+
+
+
+
+

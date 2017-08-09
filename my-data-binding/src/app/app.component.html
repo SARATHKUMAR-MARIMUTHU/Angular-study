@@ -1,0 +1,37 @@
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#si">String Interpolation</a></li>
+  <li><a data-toggle="tab" href="#pb">Property Binding</a></li>
+  <li><a data-toggle="tab" href="#cpb">Custom Property Binding</a></li>
+  <li><a data-toggle="tab" href="#eb">Event Binding</a></li>
+  <li><a data-toggle="tab" href="#ceb">custom Event Binding</a></li>
+  <li><a data-toggle="tab" href="#twb">Two way Binding</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="si" class="tab-pane fade in active container">
+    <app-si></app-si>
+  </div>
+  <div id="pb" class="tab-pane fade container">
+   <app-property-binding></app-property-binding>
+  </div>
+  <div id="cpb" class="tab-pane fade container">
+    <!-- reseting the original value here  -->
+  <app-custom-propertybinding [myAge]='age'></app-custom-propertybinding>
+  </div>
+
+  <div id="eb" class="tab-pane fade container">
+    <app-event-binding></app-event-binding>
+  </div>
+
+
+  <div id="ceb" class="tab-pane fade container">
+    <!-- reseting the original value here  -->
+  <app-custom-eventbinding (profileloaded)="getLastlogin($event,profile)" ></app-custom-eventbinding >
+    <div>{{lastLogin}}</div>
+  </div>
+
+
+  <div id="twb" class="tab-pane fade container">
+    <app-two-waybinding></app-two-waybinding>
+  </div>
+</div>

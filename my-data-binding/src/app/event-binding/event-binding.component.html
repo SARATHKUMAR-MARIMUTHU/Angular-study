@@ -1,0 +1,20 @@
+<p (click)="onclcik($event)" >
+  event-binding works!
+  
+</p>
+<p (click)="onclcik(event)" >
+ 
+</p>
+
+<div> {{i}}</div>
+
+
+
+
+
+<div *ngFor = 'let lst of appList'>
+   <ul>
+      <li>{{lst.ID}}</li>
+      <img [src] = 'lst.url'>
+   </ul>
+</div>

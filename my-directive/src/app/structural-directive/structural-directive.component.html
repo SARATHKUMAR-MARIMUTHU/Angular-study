@@ -1,0 +1,21 @@
+<h1>structural-directive works!</h1>
+<h2>*ngIf</h2>
+<div *ngIf="flag"  >Life is beautiful</div>
+<button class="btn btn-primary" (click)="onToggle()" >click Me </button>
+<hr>
+<div>
+   <ul>
+     <li class="nav" *ngFor="let menu of menus,  let i= index " >
+       <a href="#" *ngIf="i > 0" >{{ menu }} {{ i }}</a></li>
+   </ul>
+</div>
+<hr>
+  <div>
+     <h2>ngSwitch</h2>
+     <div [ngSwitch]="age" >
+       <input type="text" [(ngModel)]="age" >
+       <p *ngSwitchCase="10" >Age is 10. u r eligible</p>
+       <p *ngSwitchCase="20" >Age is 20. u r not eligible</p>
+       <p *ngSwitchDefault>This is default</p>
+     </div>
+  </div>   
